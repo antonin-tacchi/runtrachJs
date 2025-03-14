@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filtrer les Pokémons</h1>
+
+    <!-- Formulaire pour trier les Pokémons -->
+    <form id="filterForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+        <br><br>
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom">
+        <br><br>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="">--Choisir un type--</option>
+            <option value="grass">plante</option>
+            <option value="fire">feu</option>
+            <option value="water">eau</option>
+            <option value="Electric">Électrik</option>
+            <option value="Normal">Normal</option>
+            <option value="Psy">Psy</option>
+            <option value="Bug">Insecte</option>
+            <option value="flying">Vol</option>
+            <option value="Poison">poison</option>
+            <option value="Ground">Sol</option>
+            <option value="fairy">Fée</option>
+            <option value="fighting">Combat</option>
+            <option value="steel">Acier</option>
+            <option value="dragon">Dragon</option>
+            <option value="ice">Glace</option>
+            <option value="Rock">Roche</option>
+            <option value="ghost">spetre</option>
+            <!-- Ajouter plus de types si nécessaire -->
+        </select>
+        <br><br>
+
+        <input type="button" value="Filtrer" id="filterButton">
+    </form>
+
+    <h2>Résultats :</h2>
+    <div id="results"></div>
+</body>
+</html>
