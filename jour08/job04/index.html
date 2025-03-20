@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Formulaire de création de compte</title>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header avec navigation -->
+    <header>
+        <nav>
+            <ul class="flex flex-wrap items-center justify-center gap-6 bg-purple-600 p-4 shadow-lg">
+                <li><a href="index.html" class="text-white hover:text-gray-200">Accueil</a></li>
+                <li><a href="index.html" class="text-white hover:text-gray-200">Inscription</a></li>
+                <li><a href="index.html" class="text-white hover:text-gray-200">Connexion</a></li>
+                <li><a href="index.html" class="text-white hover:text-gray-200">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulaire de création de compte -->
+    <section class="max-w-4xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-xl">
+        <h1 class="text-3xl font-semibold text-center text-gray-800 mb-6">Créer un compte</h1>
+        <form action="index.html" method="POST" class="space-y-6">
+            
+            <!-- Civilité -->
+            <div>
+                <label for="civilite" class="text-lg font-medium text-gray-700">Civilité</label><br>
+                <div class="flex flex-wrap items-center gap-4">
+                    <input type="radio" id="monsieur" name="civilite" value="monsieur" required class="h-4 w-4 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="monsieur" class="text-gray-700">Monsieur</label>
+                    <input type="radio" id="madame" name="civilite" value="madame" required class="h-4 w-4 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="madame" class="text-gray-700">Madame</label>
+                    <input type="radio" id="autre" name="civilite" value="autre" required class="h-4 w-4 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="autre" class="text-gray-700">Autre</label>
+                </div>
+            </div>
+
+            <!-- Prénom -->
+            <div>
+                <label for="prenom" class="text-lg font-medium text-gray-700">Prénom</label>
+                <div class="relative">
+                    <input type="text" id="prenom" name="prenom" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 2a4 4 0 11-4 4 4 4 0 014-4zM4 10h16v8H4z" /></svg>
+                </div>
+            </div>
+
+            <!-- Nom -->
+            <div>
+                <label for="nom" class="text-lg font-medium text-gray-700">Nom</label>
+                <div class="relative">
+                    <input type="text" id="nom" name="nom" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M6 9l6 6 6-6" /></svg>
+                </div>
+            </div>
+
+            <!-- Adresse -->
+            <div>
+                <label for="adresse" class="text-lg font-medium text-gray-700">Adresse</label>
+                <div class="relative">
+                    <input type="text" id="adresse" name="adresse" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 10h-4V6h-6v4H5v10h14V10z" /></svg>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="text-lg font-medium text-gray-700">Email</label>
+                <div class="relative">
+                    <input type="email" id="email" name="email" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 5v14h18V5H3zm18-3h-2L12 7 3 2H1v2l11 6 11-6V2z" /></svg>
+                </div>
+            </div>
+
+            <!-- Mot de passe -->
+            <div>
+                <label for="motdepasse" class="text-lg font-medium text-gray-700">Mot de passe</label>
+                <div class="relative">
+                    <input type="password" id="motdepasse" name="motdepasse" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v18m9-9H3" /></svg>
+                </div>
+            </div>
+
+            <!-- Validation du mot de passe -->
+            <div>
+                <label for="confirmation" class="text-lg font-medium text-gray-700">Confirmer le mot de passe</label>
+                <div class="relative">
+                    <input type="password" id="confirmation" name="confirmation" required class="w-full p-3 pl-10 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3v18m9-9H3" /></svg>
+                </div>
+            </div>
+
+            <!-- Passions -->
+            <div>
+                <label class="text-lg font-medium text-gray-700">Passions</label><br>
+                <div class="space-x-4 flex flex-wrap items-center justify-start">
+                    <input type="checkbox" id="informatique" name="passions" value="informatique" class="h-5 w-5 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="informatique" class="text-gray-700">Informatique</label>
+                    <input type="checkbox" id="voyages" name="passions" value="voyages" class="h-5 w-5 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="voyages" class="text-gray-700">Voyages</label>
+                    <input type="checkbox" id="sport" name="passions" value="sport" class="h-5 w-5 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="sport" class="text-gray-700">Sport</label>
+                    <input type="checkbox" id="lecture" name="passions" value="lecture" class="h-5 w-5 text-purple-600 border-gray-300 focus:ring-purple-500">
+                    <label for="lecture" class="text-gray-700">Lecture</label>
+                </div>
+            </div>
+
+            <!-- Bouton de validation -->
+            <div>
+                <button type="submit" class="w-full py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500">Créer un compte</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="flex flex-wrap items-center justify-center gap-6 bg-blue-400 p-4 shadow-lg">
+            <li><a href="index.html" class="text-white hover:text-gray-200">Accueil</a></li>
+            <li><a href="index.html" class="text-white hover:text-gray-200">Inscription</a></li>
+            <li><a href="index.html" class="text-white hover:text-gray-200">Connexion</a></li>
+            <li><a href="index.html" class="text-white hover:text-gray-200">Rechercher</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

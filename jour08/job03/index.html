@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Formulaire de création de compte</title>
+</head>
+<body>
+
+    <!-- Header avec navigation -->
+    <header>
+        <nav>
+            <ul class="flex items-stretch gap-4 bg-purple-500 p-4">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">Inscription</a></li>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="index.html">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulaire de création de compte -->
+    <section>
+        <h1>Créer un compte</h1>
+        <form action="index.html" method="POST">
+            
+            <!-- Civilité -->
+            <label for="civilite">Civilité:</label><br>
+            <input type="radio" id="monsieur" name="civilite" value="monsieur" required>
+            <label for="monsieur">Monsieur</label>
+            <input type="radio" id="madame" name="civilite" value="madame" required>
+            <label for="madame">Madame</label><br><br>
+            <input type="radio" id="autre" name="civilite" value="autre" required>
+            <label for="autre">Autre</label><br><br>
+
+            <!-- Prénom -->
+            <label for="prenom">Prénom:</label><br>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+
+            <!-- Nom -->
+            <label for="nom">Nom:</label><br>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <!-- Adresse -->
+            <label for="adresse">Adresse:</label><br>
+            <input type="text" id="adresse" name="adresse" required><br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Mot de passe -->
+            <label for="motdepasse">Mot de passe:</label><br>
+            <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+
+            <!-- Validation du mot de passe -->
+            <label for="confirmation">Confirmer le mot de passe:</label><br>
+            <input type="password" id="confirmation" name="confirmation" required><br><br>
+
+            <!-- Passions -->
+            <label>Passions:</label><br>
+            <input type="checkbox" id="informatique" name="passions" value="informatique">
+            <label for="informatique">Informatique</label><br>
+            <input type="checkbox" id="voyages" name="passions" value="voyages">
+            <label for="voyages">Voyages</label><br>
+            <input type="checkbox" id="sport" name="passions" value="sport">
+            <label for="sport">Sport</label><br>
+            <input type="checkbox" id="lecture" name="passions" value="lecture">
+            <label for="lecture">Lecture</label><br><br>
+
+            <!-- Bouton de validation -->
+            <button type="submit">Créer un compte</button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="flex items-stretch gap-4 bg-pink-500 p-4">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
